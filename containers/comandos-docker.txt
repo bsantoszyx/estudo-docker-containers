@@ -20,3 +20,17 @@ docker run -it ubuntu:latest /bin/bash  # Executa Ubuntu interativo
 - Consegui executar comandos dentro do container
 - O container tem seu próprio sistema de arquivos
 - Ao sair com 'exit', o container para
+
+## Dockerfile e Imagens Personalizadas
+docker build -t <nome>:<tag> .    # Constrói imagem a partir do Dockerfile
+docker run -d -p <host>:<container> --name <nome> <imagem>  # Executa container em background
+docker logs <container>           # Mostra logs do container
+docker stop <container>           # Para um container
+docker start <container>          # Inicia um container parado
+docker exec -it <container> /bin/sh  # Acessa container em execução
+
+## Primeira Aplicação Web
+- Criada aplicação HTML simples
+- Dockerfile usando Nginx como base
+- Container acessível em http://localhost:8080
+- Screenshot salvo: screenshot-webapp.png
